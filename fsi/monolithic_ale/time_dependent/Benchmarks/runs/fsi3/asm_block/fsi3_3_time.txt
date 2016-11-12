@@ -1,0 +1,1412 @@
+ FemusInit(): PETSC_COMM_WORLD initialized
+
+ Reading flags:
+ mem_infos: 0
+ n_timesteps: 10
+ time_step: 0.010000
+ restart_file_name: http://www.math.ttu.edu/~eaulisa/Benchmarks/runs/save/FSI3/turek_FSI3_4_time6.420000
+ autosave_time_interval: 40
+ nlevel: 4
+ nrefinement: 4
+ input: ./input/turek_FSI3.neu
+ redirected standard output: fsi3_3_time.txt
+ ic_bdc: ../../../../lib64/libfsi3_td_2d_turek_hron_benchmark_bdc.so
+ rhof: 1000.000000
+ rhos: 1000.000000
+ E: 6000000.000000
+ muf: 1.000000
+ ni: 0.500000
+ nnonlin_iter: 15
+ lin_tol: 0.0001
+ alin_tol: 1e-20
+ nonlin_tol: 1e-08
+ asm_block: 3
+ outer_ksp_solver: gmres
+ npre: 4
+ npost: 4
+ ksp_restart: 30
+ max_outer_solver_iter: 60
+
+ Loading lib bdcfilename... done
+ Loading symbol BdcFunction... done
+ Loading symbol TimeStepFunction... done
+ Reading corse mesh from file: ./input/turek_FSI3.neu
+ Number of uniform mesh refinement: 4
+ Mesh Level        : 0
+ Number of elements: 246
+ Number of nodes   : 1082
+ Mesh Level        : 1
+ Number of elements: 984
+ Number of nodes   : 4132
+ Mesh Level        : 2
+ Number of elements: 3936
+ Number of nodes   : 16136
+ Mesh Level        : 3
+ Number of elements: 15744
+ Number of nodes   : 63760
+Warning: the value for the Poisson coeffcient is 0.5, the material is incompressible
+The Lame constant is infinity and it has been set equal to 1.0e100
+Solid properties: 
+Density: 1000
+Young Module: 6e+06
+Poisson coeffcient: 0.5
+Lambda Lamé: 1e+100
+Mu lamé: 2e+06
+Physical Model: 5
+
+
+Fluid properties: 
+Density: 1000
+viscosity: 1
+Inverse of Reynolds number: 0.001
+Inverse of Prandtl number: 1
+Inverse of Froude number: 0.101972
+Inverse of Rayleigh number: 9.80665
+Inverse of Peclet number: 1000
+Inverse of Reynolds number: 1000
+Inverse of Grashof number: 9.80665
+Physical Model: 0
+
+
+ Add variable  DX discretized with FE type            3 and time discretzation order 2
+ Add variable  DY discretized with FE type            3 and time discretzation order 2
+ Add variable   U discretized with FE type            3 and time discretzation order 2
+ Add variable   V discretized with FE type            3 and time discretzation order 2
+ Add variable   P discretized with FE type            1 and time discretzation order 2
+ Set         Steady Boundary_condition for variable  DX
+ Set         Steady Boundary_condition for variable  DY
+ Set Time_dependent Boundary_condition for variable   U
+ Set         Steady Boundary_condition for variable   V
+ Set         Steady Boundary_condition for variable   P
+substring: 6.420000
+
+ *********** Solving... ************  
+
+ That's alright, VTKParallelFiles/ is already there.
+
+ The output is printed to file output//sol.level4.0.biquadratic.pvtu in parallel VTK-XML (64-based) format
+Assemble Matrix
+assemble counter = 0
+ Simulation Time:  6.43   TimeStep: 1
+
+ *** Start Nonlinear   V-Cycle ***
+
+   ****** Start Level Max 4 ******
+
+   ********* Nonlinear iteration 1 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	3.56511
+   ********* Level Max 4 MGINIT TIME:	0.542727
+   ********* Level Max 4 ASSEMBLY TIME:	13.7586
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.282080e+01 
+       *************** Number of outer ksp solver iterations = 5 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.013926938 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.125884e-07
+       *************** Level Max 4  Linear Res  L2norm DY = 1.289763e-07
+       *************** Level Max 4  Linear Res  L2norm U = 1.062432e-06
+       *************** Level Max 4  Linear Res  L2norm V = 4.182713e-07
+       *************** Level Max 4  Linear Res  L2norm P = 7.020229e-05
+       *************** Linear-Cycle TIME:	  12.834367
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 6.639405e-01  ** Eps_l2norm= 3.011045e-01  ** Sol_l2norm= 4.535113e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 7.309372e-01  ** Eps_l2norm= 7.827905e-01  ** Sol_l2norm= 1.070941e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 6.068355e-02  ** Eps_l2norm= 3.222026e+01  ** Sol_l2norm= 5.309555e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.318496e-01  ** Eps_l2norm= 3.237607e+01  ** Sol_l2norm= 1.396426e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.147933e-02  ** Eps_l2norm= 2.876214e+02  ** Sol_l2norm= 2.505559e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  12.933093
+
+   ********* Nonlinear iteration 2 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.211063
+   ********* Level Max 4 MGINIT TIME:	0.423069
+   ********* Level Max 4 ASSEMBLY TIME:	11.335824
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.028350e+01 
+       *************** Number of outer ksp solver iterations = 3 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.0091069814 
+       *************** Level Max 4  Linear Res  L2norm DX = 3.152481e-08
+       *************** Level Max 4  Linear Res  L2norm DY = 3.616193e-08
+       *************** Level Max 4  Linear Res  L2norm U = 9.368421e-07
+       *************** Level Max 4  Linear Res  L2norm V = 2.381449e-07
+       *************** Level Max 4  Linear Res  L2norm P = 6.345492e-05
+       *************** Linear-Cycle TIME:	  10.295689
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 6.326326e-02  ** Eps_l2norm= 2.918699e-02  ** Sol_l2norm= 4.613576e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 8.103438e-03  ** Eps_l2norm= 8.646813e-03  ** Sol_l2norm= 1.067055e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 9.822732e-03  ** Eps_l2norm= 5.206523e+00  ** Sol_l2norm= 5.300484e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.915549e-02  ** Eps_l2norm= 2.683163e+00  ** Sol_l2norm= 1.400728e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 5.800554e-03  ** Eps_l2norm= 1.449814e+02  ** Sol_l2norm= 2.499441e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  10.389536
+
+   ********* Nonlinear iteration 3 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.179081
+   ********* Level Max 4 MGINIT TIME:	0.419584
+   ********* Level Max 4 ASSEMBLY TIME:	11.057256
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.275467e+01 
+       *************** Number of outer ksp solver iterations = 5 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 1.6500868e-05 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.114475e-10
+       *************** Level Max 4  Linear Res  L2norm DY = 1.118159e-10
+       *************** Level Max 4  Linear Res  L2norm U = 1.204796e-09
+       *************** Level Max 4  Linear Res  L2norm V = 5.588561e-10
+       *************** Level Max 4  Linear Res  L2norm P = 7.813725e-08
+       *************** Linear-Cycle TIME:	  12.766819
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.264111e-04  ** Eps_l2norm= 5.831536e-05  ** Sol_l2norm= 4.613151e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 1.236238e-04  ** Eps_l2norm= 1.319060e-04  ** Sol_l2norm= 1.066995e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.595509e-04  ** Eps_l2norm= 8.457031e-02  ** Sol_l2norm= 5.300522e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 3.351297e-04  ** Eps_l2norm= 4.694512e-02  ** Sol_l2norm= 1.400804e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.642776e-05  ** Eps_l2norm= 4.106054e-01  ** Sol_l2norm= 2.499461e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  12.860850
+
+   ********* Nonlinear iteration 4 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.239599
+   ********* Level Max 4 MGINIT TIME:	0.429028
+   ********* Level Max 4 ASSEMBLY TIME:	11.330265
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.507393e+01 
+       *************** Number of outer ksp solver iterations = 7 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 9.7000588e-09 
+       *************** Level Max 4  Linear Res  L2norm DX = 4.681342e-14
+       *************** Level Max 4  Linear Res  L2norm DY = 5.467401e-14
+       *************** Level Max 4  Linear Res  L2norm U = 8.645770e-13
+       *************** Level Max 4  Linear Res  L2norm V = 3.621111e-13
+       *************** Level Max 4  Linear Res  L2norm P = 5.539947e-11
+       *************** Linear-Cycle TIME:	  15.085224
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 8.265975e-08  ** Eps_l2norm= 3.813219e-08  ** Sol_l2norm= 4.613150e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 7.182400e-08  ** Eps_l2norm= 7.663587e-08  ** Sol_l2norm= 1.066995e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 8.888619e-08  ** Eps_l2norm= 4.711432e-05  ** Sol_l2norm= 5.300522e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.575846e-07  ** Eps_l2norm= 3.608257e-05  ** Sol_l2norm= 1.400804e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 3.540389e-09  ** Eps_l2norm= 8.849064e-05  ** Sol_l2norm= 2.499461e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  15.178809
+
+   ********* Nonlinear iteration 5 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.179643
+   ********* Level Max 4 MGINIT TIME:	0.417551
+   ********* Level Max 4 ASSEMBLY TIME:	11.077614
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.842114e+01 
+       *************** Number of outer ksp solver iterations = 10 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 2.9383635e-13 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.620127e-19
+       *************** Level Max 4  Linear Res  L2norm DY = 2.307932e-19
+       *************** Level Max 4  Linear Res  L2norm U = 1.608702e-17
+       *************** Level Max 4  Linear Res  L2norm V = 7.459041e-18
+       *************** Level Max 4  Linear Res  L2norm P = 1.047233e-15
+       *************** Linear-Cycle TIME:	  18.431791
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 4.608307e-12  ** Eps_l2norm= 2.125881e-12  ** Sol_l2norm= 4.613150e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 4.075973e-12  ** Eps_l2norm= 4.349044e-12  ** Sol_l2norm= 1.066995e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.752744e-11  ** Eps_l2norm= 9.290456e-09  ** Sol_l2norm= 5.300522e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 6.224683e-11  ** Eps_l2norm= 8.719562e-09  ** Sol_l2norm= 1.400804e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 3.678272e-13  ** Eps_l2norm= 9.193697e-09  ** Sol_l2norm= 2.499461e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  18.525510
+
+   ****** Nonlinear-Cycle TIME:  128.447480
+
+   ****** End Level Max 4 ******
+
+   *** Nonlinear  TIME:  128.447508
+
+ That's alright, VTKParallelFiles/ is already there.
+
+ The output is printed to file output//sol.level4.1.biquadratic.pvtu in parallel VTK-XML (64-based) format
+Assemble Matrix
+assemble counter = 1
+ Simulation Time:  6.440000   TimeStep: 2
+
+ *** Start Nonlinear   V-Cycle ***
+
+   ****** Start Level Max 4 ******
+
+   ********* Nonlinear iteration 1 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	3.464051
+   ********* Level Max 4 MGINIT TIME:	0.419982
+   ********* Level Max 4 ASSEMBLY TIME:	13.382634
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.140807e+01 
+       *************** Number of outer ksp solver iterations = 4 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.044743004 
+       *************** Level Max 4  Linear Res  L2norm DX = 2.785383e-06
+       *************** Level Max 4  Linear Res  L2norm DY = 2.895242e-06
+       *************** Level Max 4  Linear Res  L2norm U = 2.508779e-06
+       *************** Level Max 4  Linear Res  L2norm V = 9.996131e-07
+       *************** Level Max 4  Linear Res  L2norm P = 1.524929e-04
+       *************** Linear-Cycle TIME:	  11.420250
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.282301e+00  ** Eps_l2norm= 3.160498e-01  ** Sol_l2norm= 2.464710e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 8.203442e-01  ** Eps_l2norm= 8.463688e-01  ** Sol_l2norm= 1.031724e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 5.379465e-02  ** Eps_l2norm= 2.865663e+01  ** Sol_l2norm= 5.327042e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.254639e-01  ** Eps_l2norm= 3.186370e+01  ** Sol_l2norm= 1.413251e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 2.248986e-02  ** Eps_l2norm= 5.644187e+02  ** Sol_l2norm= 2.509659e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  11.513741
+
+   ********* Nonlinear iteration 2 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.179074
+   ********* Level Max 4 MGINIT TIME:	0.419782
+   ********* Level Max 4 ASSEMBLY TIME:	11.063241
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.024536e+01 
+       *************** Number of outer ksp solver iterations = 3 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.014344249 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.691180e-07
+       *************** Level Max 4  Linear Res  L2norm DY = 1.984596e-07
+       *************** Level Max 4  Linear Res  L2norm U = 8.237208e-07
+       *************** Level Max 4  Linear Res  L2norm V = 2.887669e-07
+       *************** Level Max 4  Linear Res  L2norm P = 5.451289e-05
+       *************** Linear-Cycle TIME:	  10.257771
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.760297e-01  ** Eps_l2norm= 4.405399e-02  ** Sol_l2norm= 2.502646e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 1.064968e-02  ** Eps_l2norm= 1.103370e-02  ** Sol_l2norm= 1.036059e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.093410e-02  ** Eps_l2norm= 5.808616e+00  ** Sol_l2norm= 5.312387e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.114491e-02  ** Eps_l2norm= 3.001054e+00  ** Sol_l2norm= 1.419279e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.119875e-02  ** Eps_l2norm= 2.797781e+02  ** Sol_l2norm= 2.498297e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  10.350992
+
+   ********* Nonlinear iteration 3 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.178130
+   ********* Level Max 4 MGINIT TIME:	0.420234
+   ********* Level Max 4 ASSEMBLY TIME:	11.067902
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.266395e+01 
+       *************** Number of outer ksp solver iterations = 5 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 2.5060544e-05 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.428440e-10
+       *************** Level Max 4  Linear Res  L2norm DY = 1.487733e-10
+       *************** Level Max 4  Linear Res  L2norm U = 3.935281e-09
+       *************** Level Max 4  Linear Res  L2norm V = 1.192834e-09
+       *************** Level Max 4  Linear Res  L2norm P = 1.805933e-07
+       *************** Linear-Cycle TIME:	  12.677562
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 4.438930e-04  ** Eps_l2norm= 1.110799e-04  ** Sol_l2norm= 2.502403e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 1.319392e-04  ** Eps_l2norm= 1.367006e-04  ** Sol_l2norm= 1.036088e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.909087e-04  ** Eps_l2norm= 1.014190e-01  ** Sol_l2norm= 5.312433e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 3.810309e-04  ** Eps_l2norm= 5.408249e-02  ** Sol_l2norm= 1.419373e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 3.401380e-05  ** Eps_l2norm= 8.497819e-01  ** Sol_l2norm= 2.498345e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  12.779485
+
+   ********* Nonlinear iteration 4 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.177591
+   ********* Level Max 4 MGINIT TIME:	0.419123
+   ********* Level Max 4 ASSEMBLY TIME:	11.260384
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.489744e+01 
+       *************** Number of outer ksp solver iterations = 7 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 8.5807985e-09 
+       *************** Level Max 4  Linear Res  L2norm DX = 4.212432e-14
+       *************** Level Max 4  Linear Res  L2norm DY = 8.232990e-14
+       *************** Level Max 4  Linear Res  L2norm U = 7.486957e-13
+       *************** Level Max 4  Linear Res  L2norm V = 2.656966e-13
+       *************** Level Max 4  Linear Res  L2norm P = 3.866651e-11
+       *************** Linear-Cycle TIME:	  14.908873
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 4.970291e-08  ** Eps_l2norm= 1.243767e-08  ** Sol_l2norm= 2.502403e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 4.116997e-08  ** Eps_l2norm= 4.265571e-08  ** Sol_l2norm= 1.036088e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.279969e-07  ** Eps_l2norm= 6.799749e-05  ** Sol_l2norm= 5.312433e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 6.043491e-07  ** Eps_l2norm= 8.577967e-05  ** Sol_l2norm= 1.419373e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 4.041904e-09  ** Eps_l2norm= 1.009807e-04  ** Sol_l2norm= 2.498345e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  15.002564
+
+   ********* Nonlinear iteration 5 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.179113
+   ********* Level Max 4 MGINIT TIME:	0.420081
+   ********* Level Max 4 ASSEMBLY TIME:	11.051499
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.723232e+01 
+       *************** Number of outer ksp solver iterations = 9 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 4.5426588e-13 
+       *************** Level Max 4  Linear Res  L2norm DX = 9.025887e-19
+       *************** Level Max 4  Linear Res  L2norm DY = 1.213041e-18
+       *************** Level Max 4  Linear Res  L2norm U = 5.082373e-17
+       *************** Level Max 4  Linear Res  L2norm V = 1.658388e-17
+       *************** Level Max 4  Linear Res  L2norm P = 2.363982e-15
+       *************** Linear-Cycle TIME:	  17.243318
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.551271e-11  ** Eps_l2norm= 3.881906e-12  ** Sol_l2norm= 2.502403e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 8.081671e-12  ** Eps_l2norm= 8.373323e-12  ** Sol_l2norm= 1.036088e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.025343e-11  ** Eps_l2norm= 5.447066e-09  ** Sol_l2norm= 5.312433e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 3.322376e-11  ** Eps_l2norm= 4.715691e-09  ** Sol_l2norm= 1.419373e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 2.723673e-13  ** Eps_l2norm= 6.804673e-09  ** Sol_l2norm= 2.498345e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  17.336706
+
+   ****** Nonlinear-Cycle TIME:  124.809220
+
+   ****** End Level Max 4 ******
+
+   *** Nonlinear  TIME:  124.809244
+
+ That's alright, VTKParallelFiles/ is already there.
+
+ The output is printed to file output//sol.level4.2.biquadratic.pvtu in parallel VTK-XML (64-based) format
+Assemble Matrix
+assemble counter = 2
+ Simulation Time:  6.450000   TimeStep: 3
+
+ *** Start Nonlinear   V-Cycle ***
+
+   ****** Start Level Max 4 ******
+
+   ********* Nonlinear iteration 1 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	3.463982
+   ********* Level Max 4 MGINIT TIME:	0.420414
+   ********* Level Max 4 ASSEMBLY TIME:	13.337145
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.142323e+01 
+       *************** Number of outer ksp solver iterations = 4 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.038205849 
+       *************** Level Max 4  Linear Res  L2norm DX = 2.253564e-06
+       *************** Level Max 4  Linear Res  L2norm DY = 2.496701e-06
+       *************** Level Max 4  Linear Res  L2norm U = 2.866636e-06
+       *************** Level Max 4  Linear Res  L2norm V = 1.270915e-06
+       *************** Level Max 4  Linear Res  L2norm P = 1.939933e-04
+       *************** Linear-Cycle TIME:	  11.435362
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.025395e+00  ** Eps_l2norm= 2.831414e-01  ** Sol_l2norm= 2.761291e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 5.471942e-01  ** Eps_l2norm= 8.017026e-01  ** Sol_l2norm= 1.465115e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 4.629687e-02  ** Eps_l2norm= 2.467797e+01  ** Sol_l2norm= 5.330377e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.268430e-01  ** Eps_l2norm= 3.213071e+01  ** Sol_l2norm= 1.416430e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 2.247228e-02  ** Eps_l2norm= 5.630934e+02  ** Sol_l2norm= 2.505724e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  11.529376
+
+   ********* Nonlinear iteration 2 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.177979
+   ********* Level Max 4 MGINIT TIME:	0.421090
+   ********* Level Max 4 ASSEMBLY TIME:	11.144749
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 9.068630e+00 
+       *************** Number of outer ksp solver iterations = 2 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.023761956 
+       *************** Level Max 4  Linear Res  L2norm DX = 2.824677e-07
+       *************** Level Max 4  Linear Res  L2norm DY = 2.569805e-07
+       *************** Level Max 4  Linear Res  L2norm U = 5.153494e-07
+       *************** Level Max 4  Linear Res  L2norm V = 2.057709e-07
+       *************** Level Max 4  Linear Res  L2norm P = 3.397654e-05
+       *************** Linear-Cycle TIME:	   9.081115
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.722574e-01  ** Eps_l2norm= 4.791078e-02  ** Sol_l2norm= 2.781348e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 5.855863e-03  ** Eps_l2norm= 8.567538e-03  ** Sol_l2norm= 1.463070e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.059885e-02  ** Eps_l2norm= 5.632879e+00  ** Sol_l2norm= 5.314615e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.764207e-02  ** Eps_l2norm= 2.510204e+00  ** Sol_l2norm= 1.422851e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.334557e-02  ** Eps_l2norm= 3.326409e+02  ** Sol_l2norm= 2.492520e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	   9.173972
+
+   ********* Nonlinear iteration 3 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.180081
+   ********* Level Max 4 MGINIT TIME:	0.426393
+   ********* Level Max 4 ASSEMBLY TIME:	11.089673
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.142662e+01 
+       *************** Number of outer ksp solver iterations = 4 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 8.5584405e-05 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.647440e-09
+       *************** Level Max 4  Linear Res  L2norm DY = 1.849477e-09
+       *************** Level Max 4  Linear Res  L2norm U = 5.948539e-09
+       *************** Level Max 4  Linear Res  L2norm V = 2.448811e-09
+       *************** Level Max 4  Linear Res  L2norm P = 3.808335e-07
+       *************** Linear-Cycle TIME:	  11.438757
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.313663e-03  ** Eps_l2norm= 3.655267e-04  ** Sol_l2norm= 2.782501e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 4.293509e-04  ** Eps_l2norm= 6.282964e-04  ** Sol_l2norm= 1.463363e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.535041e-04  ** Eps_l2norm= 8.158280e-02  ** Sol_l2norm= 5.314697e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 5.004163e-04  ** Eps_l2norm= 7.120694e-02  ** Sol_l2norm= 1.422954e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 5.897400e-05  ** Eps_l2norm= 1.469977e+00  ** Sol_l2norm= 2.492585e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  11.532799
+
+   ********* Nonlinear iteration 4 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.179564
+   ********* Level Max 4 MGINIT TIME:	0.421376
+   ********* Level Max 4 ASSEMBLY TIME:	11.087883
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.372751e+01 
+       *************** Number of outer ksp solver iterations = 6 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 6.8233492e-08 
+       *************** Level Max 4  Linear Res  L2norm DX = 5.174264e-13
+       *************** Level Max 4  Linear Res  L2norm DY = 6.396868e-13
+       *************** Level Max 4  Linear Res  L2norm U = 5.012390e-12
+       *************** Level Max 4  Linear Res  L2norm V = 2.276027e-12
+       *************** Level Max 4  Linear Res  L2norm P = 3.228328e-10
+       *************** Linear-Cycle TIME:	  13.739161
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 9.754536e-07  ** Eps_l2norm= 2.714201e-07  ** Sol_l2norm= 2.782501e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 3.243336e-07  ** Eps_l2norm= 4.746179e-07  ** Sol_l2norm= 1.463364e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.552729e-07  ** Eps_l2norm= 8.252287e-05  ** Sol_l2norm= 5.314697e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 5.814981e-07  ** Eps_l2norm= 8.274450e-05  ** Sol_l2norm= 1.422954e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 5.576967e-08  ** Eps_l2norm= 1.390107e-03  ** Sol_l2norm= 2.492585e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  13.832790
+
+   ********* Nonlinear iteration 5 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.179949
+   ********* Level Max 4 MGINIT TIME:	0.420371
+   ********* Level Max 4 ASSEMBLY TIME:	11.083648
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.723297e+01 
+       *************** Number of outer ksp solver iterations = 9 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 2.9978831e-12 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.312715e-18
+       *************** Level Max 4  Linear Res  L2norm DY = 2.800124e-18
+       *************** Level Max 4  Linear Res  L2norm U = 2.054070e-16
+       *************** Level Max 4  Linear Res  L2norm V = 1.036876e-16
+       *************** Level Max 4  Linear Res  L2norm P = 1.338377e-14
+       *************** Linear-Cycle TIME:	  17.243907
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.043877e-10  ** Eps_l2norm= 2.904589e-11  ** Sol_l2norm= 2.782501e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 3.191321e-11  ** Eps_l2norm= 4.670063e-11  ** Sol_l2norm= 1.463364e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.119575e-10  ** Eps_l2norm= 5.950203e-08  ** Sol_l2norm= 5.314697e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 4.004287e-10  ** Eps_l2norm= 5.697916e-08  ** Sol_l2norm= 1.422954e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 2.310247e-12  ** Eps_l2norm= 5.758489e-08  ** Sol_l2norm= 2.492585e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  17.337363
+
+   ****** Nonlinear-Cycle TIME:  121.149466
+
+   ****** End Level Max 4 ******
+
+   *** Nonlinear  TIME:  121.149491
+
+ That's alright, VTKParallelFiles/ is already there.
+
+ The output is printed to file output//sol.level4.3.biquadratic.pvtu in parallel VTK-XML (64-based) format
+Assemble Matrix
+assemble counter = 3
+ Simulation Time:  6.460000   TimeStep: 4
+
+ *** Start Nonlinear   V-Cycle ***
+
+   ****** Start Level Max 4 ******
+
+   ********* Nonlinear iteration 1 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	3.466188
+   ********* Level Max 4 MGINIT TIME:	0.416974
+   ********* Level Max 4 ASSEMBLY TIME:	13.367397
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.141640e+01 
+       *************** Number of outer ksp solver iterations = 4 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.051592935 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.605953e-06
+       *************** Level Max 4  Linear Res  L2norm DY = 1.878796e-06
+       *************** Level Max 4  Linear Res  L2norm U = 6.217432e-06
+       *************** Level Max 4  Linear Res  L2norm V = 3.761588e-06
+       *************** Level Max 4  Linear Res  L2norm P = 4.185482e-04
+       *************** Linear-Cycle TIME:	  11.428465
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 5.359957e-01  ** Eps_l2norm= 2.484437e-01  ** Sol_l2norm= 4.635181e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 3.352962e-01  ** Eps_l2norm= 6.445573e-01  ** Sol_l2norm= 1.922352e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 4.626475e-02  ** Eps_l2norm= 2.464391e+01  ** Sol_l2norm= 5.326714e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.439161e-01  ** Eps_l2norm= 3.412320e+01  ** Sol_l2norm= 1.398973e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 2.707165e-02  ** Eps_l2norm= 6.793186e+02  ** Sol_l2norm= 2.509336e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  11.522204
+
+   ********* Nonlinear iteration 2 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.178307
+   ********* Level Max 4 MGINIT TIME:	0.417168
+   ********* Level Max 4 ASSEMBLY TIME:	11.055376
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.027009e+01 
+       *************** Number of outer ksp solver iterations = 3 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.016110438 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.673756e-07
+       *************** Level Max 4  Linear Res  L2norm DY = 1.898922e-07
+       *************** Level Max 4  Linear Res  L2norm U = 2.520550e-06
+       *************** Level Max 4  Linear Res  L2norm V = 1.507168e-06
+       *************** Level Max 4  Linear Res  L2norm P = 1.728101e-04
+       *************** Linear-Cycle TIME:	  10.282325
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 8.111334e-02  ** Eps_l2norm= 3.836226e-02  ** Sol_l2norm= 4.729463e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 3.011913e-03  ** Eps_l2norm= 5.791852e-03  ** Sol_l2norm= 1.922981e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 9.992054e-03  ** Eps_l2norm= 5.308755e+00  ** Sol_l2norm= 5.312976e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.625607e-02  ** Eps_l2norm= 2.284822e+00  ** Sol_l2norm= 1.405519e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.271809e-02  ** Eps_l2norm= 3.175371e+02  ** Sol_l2norm= 2.496735e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  10.376846
+
+   ********* Nonlinear iteration 3 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.183342
+   ********* Level Max 4 MGINIT TIME:	0.417791
+   ********* Level Max 4 ASSEMBLY TIME:	11.157365
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.383419e+01 
+       *************** Number of outer ksp solver iterations = 6 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 3.2168015e-05 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.220661e-09
+       *************** Level Max 4  Linear Res  L2norm DY = 1.384700e-09
+       *************** Level Max 4  Linear Res  L2norm U = 2.850053e-09
+       *************** Level Max 4  Linear Res  L2norm V = 1.530488e-09
+       *************** Level Max 4  Linear Res  L2norm P = 1.927094e-07
+       *************** Linear-Cycle TIME:	  13.845623
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 6.202354e-04  ** Eps_l2norm= 2.934537e-04  ** Sol_l2norm= 4.731328e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 2.453006e-04  ** Eps_l2norm= 4.717765e-04  ** Sol_l2norm= 1.923258e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.246445e-04  ** Eps_l2norm= 6.622396e-02  ** Sol_l2norm= 5.313029e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 5.040743e-04  ** Eps_l2norm= 7.085431e-02  ** Sol_l2norm= 1.405632e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 4.137188e-05  ** Eps_l2norm= 1.032962e+00  ** Sol_l2norm= 2.496772e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  13.938547
+
+   ********* Nonlinear iteration 4 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.178127
+   ********* Level Max 4 MGINIT TIME:	0.416913
+   ********* Level Max 4 ASSEMBLY TIME:	11.093871
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.624074e+01 
+       *************** Number of outer ksp solver iterations = 8 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 2.3027965e-08 
+       *************** Level Max 4  Linear Res  L2norm DX = 9.007483e-14
+       *************** Level Max 4  Linear Res  L2norm DY = 1.282925e-13
+       *************** Level Max 4  Linear Res  L2norm U = 1.663614e-12
+       *************** Level Max 4  Linear Res  L2norm V = 8.815514e-13
+       *************** Level Max 4  Linear Res  L2norm P = 1.155994e-10
+       *************** Linear-Cycle TIME:	  16.251707
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 3.755316e-07  ** Eps_l2norm= 1.776763e-07  ** Sol_l2norm= 4.731329e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 1.470976e-07  ** Eps_l2norm= 2.829067e-07  ** Sol_l2norm= 1.923258e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.064460e-07  ** Eps_l2norm= 5.655508e-05  ** Sol_l2norm= 5.313029e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 3.459080e-07  ** Eps_l2norm= 4.862195e-05  ** Sol_l2norm= 1.405632e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 3.280769e-08  ** Eps_l2norm= 8.191332e-04  ** Sol_l2norm= 2.496772e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  16.346324
+
+   ********* Nonlinear iteration 5 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.193316
+   ********* Level Max 4 MGINIT TIME:	0.419687
+   ********* Level Max 4 ASSEMBLY TIME:	11.173191
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.984991e+01 
+       *************** Number of outer ksp solver iterations = 11 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 1.0584804e-12 
+       *************** Level Max 4  Linear Res  L2norm DX = 3.881395e-19
+       *************** Level Max 4  Linear Res  L2norm DY = 6.452738e-19
+       *************** Level Max 4  Linear Res  L2norm U = 9.115507e-17
+       *************** Level Max 4  Linear Res  L2norm V = 4.843698e-17
+       *************** Level Max 4  Linear Res  L2norm P = 6.215968e-15
+       *************** Linear-Cycle TIME:	  19.859069
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.568331e-11  ** Eps_l2norm= 7.420289e-12  ** Sol_l2norm= 4.731329e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 5.315365e-12  ** Eps_l2norm= 1.022282e-11  ** Sol_l2norm= 1.923258e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 3.235635e-11  ** Eps_l2norm= 1.719102e-08  ** Sol_l2norm= 5.313029e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.288478e-10  ** Eps_l2norm= 1.811127e-08  ** Sol_l2norm= 1.405632e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 6.739612e-13  ** Eps_l2norm= 1.682727e-08  ** Sol_l2norm= 2.496772e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  19.951929
+
+   ****** Nonlinear-Cycle TIME:  129.983130
+
+   ****** End Level Max 4 ******
+
+   *** Nonlinear  TIME:  129.983153
+
+ That's alright, VTKParallelFiles/ is already there.
+
+ The output is printed to file output//sol.level4.4.biquadratic.pvtu in parallel VTK-XML (64-based) format
+Assemble Matrix
+assemble counter = 4
+ Simulation Time:  6.470000   TimeStep: 5
+
+ *** Start Nonlinear   V-Cycle ***
+
+   ****** Start Level Max 4 ******
+
+   ********* Nonlinear iteration 1 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	3.496777
+   ********* Level Max 4 MGINIT TIME:	0.429580
+   ********* Level Max 4 ASSEMBLY TIME:	13.469170
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.256554e+01 
+       *************** Number of outer ksp solver iterations = 5 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.03886494 
+       *************** Level Max 4  Linear Res  L2norm DX = 5.484635e-07
+       *************** Level Max 4  Linear Res  L2norm DY = 7.018254e-07
+       *************** Level Max 4  Linear Res  L2norm U = 3.587481e-06
+       *************** Level Max 4  Linear Res  L2norm V = 2.052594e-06
+       *************** Level Max 4  Linear Res  L2norm P = 2.525738e-04
+       *************** Linear-Cycle TIME:	  12.577088
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 3.212104e-01  ** Eps_l2norm= 2.088911e-01  ** Sol_l2norm= 6.503250e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 2.006641e-01  ** Eps_l2norm= 4.424545e-01  ** Sol_l2norm= 2.204951e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 5.382332e-02  ** Eps_l2norm= 2.858651e+01  ** Sol_l2norm= 5.311176e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.667903e-01  ** Eps_l2norm= 3.662395e+01  ** Sol_l2norm= 1.372762e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 2.178630e-02  ** Eps_l2norm= 5.460813e+02  ** Sol_l2norm= 2.506535e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  12.670195
+
+   ********* Nonlinear iteration 2 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.178946
+   ********* Level Max 4 MGINIT TIME:	0.419039
+   ********* Level Max 4 ASSEMBLY TIME:	11.041830
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.152405e+01 
+       *************** Number of outer ksp solver iterations = 4 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.0074320761 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.062640e-07
+       *************** Level Max 4  Linear Res  L2norm DY = 1.369315e-07
+       *************** Level Max 4  Linear Res  L2norm U = 8.047665e-07
+       *************** Level Max 4  Linear Res  L2norm V = 4.578071e-07
+       *************** Level Max 4  Linear Res  L2norm P = 5.577437e-05
+       *************** Linear-Cycle TIME:	  11.535930
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 3.274577e-02  ** Eps_l2norm= 2.153556e-02  ** Sol_l2norm= 6.576593e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 2.703840e-03  ** Eps_l2norm= 5.948558e-03  ** Sol_l2norm= 2.200041e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 7.717255e-03  ** Eps_l2norm= 4.092092e+00  ** Sol_l2norm= 5.302522e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.393269e-02  ** Eps_l2norm= 1.919076e+00  ** Sol_l2norm= 1.377391e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 8.169969e-03  ** Eps_l2norm= 2.041163e+02  ** Sol_l2norm= 2.498374e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  11.629437
+
+   ********* Nonlinear iteration 3 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.185682
+   ********* Level Max 4 MGINIT TIME:	0.420128
+   ********* Level Max 4 ASSEMBLY TIME:	11.093457
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.607056e+01 
+       *************** Number of outer ksp solver iterations = 8 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 1.7660603e-05 
+       *************** Level Max 4  Linear Res  L2norm DX = 9.519342e-11
+       *************** Level Max 4  Linear Res  L2norm DY = 1.410896e-10
+       *************** Level Max 4  Linear Res  L2norm U = 1.335743e-09
+       *************** Level Max 4  Linear Res  L2norm V = 7.566827e-10
+       *************** Level Max 4  Linear Res  L2norm P = 9.308979e-08
+       *************** Linear-Cycle TIME:	  16.081521
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.268092e-04  ** Eps_l2norm= 8.340201e-05  ** Sol_l2norm= 6.576970e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 5.696616e-05  ** Eps_l2norm= 1.253291e-04  ** Sol_l2norm= 2.200062e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.084913e-04  ** Eps_l2norm= 5.752789e-02  ** Sol_l2norm= 5.302534e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 3.192208e-04  ** Eps_l2norm= 4.397112e-02  ** Sol_l2norm= 1.377451e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.485904e-05  ** Eps_l2norm= 3.712349e-01  ** Sol_l2norm= 2.498378e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  16.174441
+
+   ********* Nonlinear iteration 4 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.176998
+   ********* Level Max 4 MGINIT TIME:	0.429181
+   ********* Level Max 4 ASSEMBLY TIME:	11.053873
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.720043e+01 
+       *************** Number of outer ksp solver iterations = 9 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 6.7724085e-09 
+       *************** Level Max 4  Linear Res  L2norm DX = 5.272928e-14
+       *************** Level Max 4  Linear Res  L2norm DY = 7.512464e-14
+       *************** Level Max 4  Linear Res  L2norm U = 1.487743e-12
+       *************** Level Max 4  Linear Res  L2norm V = 7.898711e-13
+       *************** Level Max 4  Linear Res  L2norm P = 9.700363e-11
+       *************** Linear-Cycle TIME:	  17.211093
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 7.884395e-08  ** Eps_l2norm= 5.185544e-08  ** Sol_l2norm= 6.576971e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 4.597221e-08  ** Eps_l2norm= 1.011417e-07  ** Sol_l2norm= 2.200062e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 5.988835e-08  ** Eps_l2norm= 3.175600e-05  ** Sol_l2norm= 5.302534e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.300101e-07  ** Eps_l2norm= 3.168277e-05  ** Sol_l2norm= 1.377451e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 6.132310e-09  ** Eps_l2norm= 1.532083e-04  ** Sol_l2norm= 2.498378e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  17.303821
+
+   ********* Nonlinear iteration 5 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.179622
+   ********* Level Max 4 MGINIT TIME:	0.418243
+   ********* Level Max 4 ASSEMBLY TIME:	11.092713
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 2.082504e+01 
+       *************** Number of outer ksp solver iterations = 12 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 2.3959011e-13 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.302035e-18
+       *************** Level Max 4  Linear Res  L2norm DY = 1.666073e-18
+       *************** Level Max 4  Linear Res  L2norm U = 1.886564e-17
+       *************** Level Max 4  Linear Res  L2norm V = 7.473459e-18
+       *************** Level Max 4  Linear Res  L2norm P = 1.282445e-15
+       *************** Linear-Cycle TIME:	  20.834993
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 5.605872e-12  ** Eps_l2norm= 3.686966e-12  ** Sol_l2norm= 6.576971e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 2.468742e-12  ** Eps_l2norm= 5.431387e-12  ** Sol_l2norm= 2.200062e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 2.613432e-11  ** Eps_l2norm= 1.385781e-08  ** Sol_l2norm= 5.302534e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.153746e-10  ** Eps_l2norm= 1.589230e-08  ** Sol_l2norm= 1.377451e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 5.332717e-13  ** Eps_l2norm= 1.332314e-08  ** Sol_l2norm= 2.498378e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  20.927347
+
+   ****** Nonlinear-Cycle TIME:  136.456376
+
+   ****** End Level Max 4 ******
+
+   *** Nonlinear  TIME:  136.456398
+
+ That's alright, VTKParallelFiles/ is already there.
+
+ The output is printed to file output//sol.level4.5.biquadratic.pvtu in parallel VTK-XML (64-based) format
+Assemble Matrix
+assemble counter = 5
+ Simulation Time:  6.480000   TimeStep: 6
+
+ *** Start Nonlinear   V-Cycle ***
+
+   ****** Start Level Max 4 ******
+
+   ********* Nonlinear iteration 1 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	3.464106
+   ********* Level Max 4 MGINIT TIME:	0.418749
+   ********* Level Max 4 ASSEMBLY TIME:	13.389983
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.380451e+01 
+       *************** Number of outer ksp solver iterations = 6 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.031132422 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.612307e-07
+       *************** Level Max 4  Linear Res  L2norm DY = 2.947295e-07
+       *************** Level Max 4  Linear Res  L2norm U = 2.415629e-06
+       *************** Level Max 4  Linear Res  L2norm V = 1.038736e-06
+       *************** Level Max 4  Linear Res  L2norm P = 1.715920e-04
+       *************** Linear-Cycle TIME:	  13.815987
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.869313e-01  ** Eps_l2norm= 1.441616e-01  ** Sol_l2norm= 7.712013e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 1.352603e-01  ** Eps_l2norm= 3.040666e-01  ** Sol_l2norm= 2.248011e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 6.201482e-02  ** Eps_l2norm= 3.286222e+01  ** Sol_l2norm= 5.299091e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.769456e-01  ** Eps_l2norm= 3.738861e+01  ** Sol_l2norm= 1.350035e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.871707e-02  ** Eps_l2norm= 4.693481e+02  ** Sol_l2norm= 2.507594e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  13.908538
+
+   ********* Nonlinear iteration 2 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.179693
+   ********* Level Max 4 MGINIT TIME:	0.418754
+   ********* Level Max 4 ASSEMBLY TIME:	11.082095
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.023960e+01 
+       *************** Number of outer ksp solver iterations = 3 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.0044310019 
+       *************** Level Max 4  Linear Res  L2norm DX = 2.120406e-08
+       *************** Level Max 4  Linear Res  L2norm DY = 2.671913e-08
+       *************** Level Max 4  Linear Res  L2norm U = 1.009276e-06
+       *************** Level Max 4  Linear Res  L2norm V = 3.658475e-07
+       *************** Level Max 4  Linear Res  L2norm P = 6.380441e-05
+       *************** Linear-Cycle TIME:	  10.251721
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.147141e-02  ** Eps_l2norm= 8.875542e-03  ** Sol_l2norm= 7.737098e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 2.024475e-03  ** Eps_l2norm= 4.542189e-03  ** Sol_l2norm= 2.243638e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 4.766474e-03  ** Eps_l2norm= 2.523553e+00  ** Sol_l2norm= 5.294381e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.009671e-02  ** Eps_l2norm= 1.365247e+00  ** Sol_l2norm= 1.352170e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 4.021702e-03  ** Eps_l2norm= 1.006872e+02  ** Sol_l2norm= 2.503596e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  10.344718
+
+   ********* Nonlinear iteration 3 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.179901
+   ********* Level Max 4 MGINIT TIME:	0.421018
+   ********* Level Max 4 ASSEMBLY TIME:	11.045454
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.730513e+01 
+       *************** Number of outer ksp solver iterations = 9 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 3.1348364e-06 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.425431e-11
+       *************** Level Max 4  Linear Res  L2norm DY = 1.799155e-11
+       *************** Level Max 4  Linear Res  L2norm U = 2.983771e-10
+       *************** Level Max 4  Linear Res  L2norm V = 1.805133e-10
+       *************** Level Max 4  Linear Res  L2norm P = 1.960377e-08
+       *************** Linear-Cycle TIME:	  17.316067
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 5.817963e-05  ** Eps_l2norm= 4.501176e-05  ** Sol_l2norm= 7.736687e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 3.924713e-05  ** Eps_l2norm= 8.805313e-05  ** Sol_l2norm= 2.243556e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 5.560459e-05  ** Eps_l2norm= 2.943919e-02  ** Sol_l2norm= 5.294382e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.519711e-04  ** Eps_l2norm= 2.054927e-02  ** Sol_l2norm= 1.352183e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 2.539994e-06  ** Eps_l2norm= 6.359119e-02  ** Sol_l2norm= 2.503596e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  17.408845
+
+   ********* Nonlinear iteration 4 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.188559
+   ********* Level Max 4 MGINIT TIME:	0.419560
+   ********* Level Max 4 ASSEMBLY TIME:	11.107082
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.956368e+01 
+       *************** Number of outer ksp solver iterations = 11 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 1.4244312e-09 
+       *************** Level Max 4  Linear Res  L2norm DX = 5.100133e-15
+       *************** Level Max 4  Linear Res  L2norm DY = 5.029784e-15
+       *************** Level Max 4  Linear Res  L2norm U = 3.196909e-13
+       *************** Level Max 4  Linear Res  L2norm V = 1.080450e-13
+       *************** Level Max 4  Linear Res  L2norm P = 2.012874e-11
+       *************** Linear-Cycle TIME:	  19.573963
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 5.391172e-09  ** Eps_l2norm= 4.170981e-09  ** Sol_l2norm= 7.736687e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 3.527376e-09  ** Eps_l2norm= 7.913866e-09  ** Sol_l2norm= 2.243556e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.810524e-08  ** Eps_l2norm= 9.585604e-06  ** Sol_l2norm= 5.294382e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 7.323609e-08  ** Eps_l2norm= 9.902861e-06  ** Sol_l2norm= 1.352183e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 6.473468e-10  ** Eps_l2norm= 1.620695e-05  ** Sol_l2norm= 2.503596e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  19.666814
+
+   ********* Nonlinear iteration 5 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.178848
+   ********* Level Max 4 MGINIT TIME:	0.418260
+   ********* Level Max 4 ASSEMBLY TIME:	11.043628
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.963162e+01 
+       *************** Number of outer ksp solver iterations = 11 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 1.2426611e-13 
+       *************** Level Max 4  Linear Res  L2norm DX = 6.194937e-20
+       *************** Level Max 4  Linear Res  L2norm DY = 9.827541e-20
+       *************** Level Max 4  Linear Res  L2norm U = 1.277872e-17
+       *************** Level Max 4  Linear Res  L2norm V = 5.467769e-18
+       *************** Level Max 4  Linear Res  L2norm P = 7.411204e-16
+       *************** Linear-Cycle TIME:	  19.639952
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.094569e-13  ** Eps_l2norm= 8.468336e-14  ** Sol_l2norm= 7.736687e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 5.153687e-14  ** Eps_l2norm= 1.156259e-13  ** Sol_l2norm= 2.243556e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 6.249156e-12  ** Eps_l2norm= 3.308542e-09  ** Sol_l2norm= 5.294382e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.539897e-11  ** Eps_l2norm= 3.434406e-09  ** Sol_l2norm= 1.352183e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.230670e-13  ** Eps_l2norm= 3.081100e-09  ** Sol_l2norm= 2.503596e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  19.733149
+
+   ****** Nonlinear-Cycle TIME:  138.730401
+
+   ****** End Level Max 4 ******
+
+   *** Nonlinear  TIME:  138.730424
+
+ That's alright, VTKParallelFiles/ is already there.
+
+ The output is printed to file output//sol.level4.6.biquadratic.pvtu in parallel VTK-XML (64-based) format
+Assemble Matrix
+assemble counter = 6
+ Simulation Time:  6.490000   TimeStep: 7
+
+ *** Start Nonlinear   V-Cycle ***
+
+   ****** Start Level Max 4 ******
+
+   ********* Nonlinear iteration 1 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	3.474082
+   ********* Level Max 4 MGINIT TIME:	0.421392
+   ********* Level Max 4 ASSEMBLY TIME:	13.394751
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.616023e+01 
+       *************** Number of outer ksp solver iterations = 8 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.011098107 
+       *************** Level Max 4  Linear Res  L2norm DX = 2.973117e-07
+       *************** Level Max 4  Linear Res  L2norm DY = 3.333196e-07
+       *************** Level Max 4  Linear Res  L2norm U = 1.123551e-06
+       *************** Level Max 4  Linear Res  L2norm V = 4.627623e-07
+       *************** Level Max 4  Linear Res  L2norm P = 7.338094e-05
+       *************** Linear-Cycle TIME:	  16.168986
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 9.624275e-02  ** Eps_l2norm= 7.654338e-02  ** Sol_l2norm= 7.953158e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 1.660345e-01  ** Eps_l2norm= 3.438814e-01  ** Sol_l2norm= 2.071145e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 6.583991e-02  ** Eps_l2norm= 3.482559e+01  ** Sol_l2norm= 5.289434e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.741927e-01  ** Eps_l2norm= 3.680356e+01  ** Sol_l2norm= 1.342252e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.234849e-02  ** Eps_l2norm= 3.093716e+02  ** Sol_l2norm= 2.505340e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  16.262120
+
+   ********* Nonlinear iteration 2 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.180587
+   ********* Level Max 4 MGINIT TIME:	0.417874
+   ********* Level Max 4 ASSEMBLY TIME:	11.071395
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.264312e+01 
+       *************** Number of outer ksp solver iterations = 5 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.0022670023 
+       *************** Level Max 4  Linear Res  L2norm DX = 3.317669e-09
+       *************** Level Max 4  Linear Res  L2norm DY = 3.716152e-09
+       *************** Level Max 4  Linear Res  L2norm U = 1.866984e-07
+       *************** Level Max 4  Linear Res  L2norm V = 7.029433e-08
+       *************** Level Max 4  Linear Res  L2norm P = 1.233225e-05
+       *************** Linear-Cycle TIME:	  12.652926
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 4.123149e-03  ** Eps_l2norm= 3.277311e-03  ** Sol_l2norm= 7.948562e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 2.438620e-03  ** Eps_l2norm= 5.039055e-03  ** Sol_l2norm= 2.066356e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 3.940383e-03  ** Eps_l2norm= 2.083461e+00  ** Sol_l2norm= 5.287458e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.151277e-02  ** Eps_l2norm= 1.547258e+00  ** Sol_l2norm= 1.343949e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.051796e-03  ** Eps_l2norm= 2.633944e+01  ** Sol_l2norm= 2.504236e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  12.747475
+
+   ********* Nonlinear iteration 3 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.192107
+   ********* Level Max 4 MGINIT TIME:	0.419123
+   ********* Level Max 4 ASSEMBLY TIME:	11.084302
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.608127e+01 
+       *************** Number of outer ksp solver iterations = 8 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 3.233863e-06 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.868420e-11
+       *************** Level Max 4  Linear Res  L2norm DY = 2.035676e-11
+       *************** Level Max 4  Linear Res  L2norm U = 2.320839e-10
+       *************** Level Max 4  Linear Res  L2norm V = 9.204850e-11
+       *************** Level Max 4  Linear Res  L2norm P = 1.543907e-08
+       *************** Linear-Cycle TIME:	  16.090673
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.312725e-05  ** Eps_l2norm= 1.043416e-05  ** Sol_l2norm= 7.948472e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 1.188786e-05  ** Eps_l2norm= 2.456429e-05  ** Sol_l2norm= 2.066333e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 2.250950e-05  ** Eps_l2norm= 1.190180e-02  ** Sol_l2norm= 5.287459e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 7.129020e-05  ** Eps_l2norm= 9.581092e-03  ** Sol_l2norm= 1.343956e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.128861e-06  ** Eps_l2norm= 2.826935e-02  ** Sol_l2norm= 2.504237e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  16.184797
+
+   ********* Nonlinear iteration 4 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.179699
+   ********* Level Max 4 MGINIT TIME:	0.421169
+   ********* Level Max 4 ASSEMBLY TIME:	11.066792
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.965146e+01 
+       *************** Number of outer ksp solver iterations = 11 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 2.6632053e-10 
+       *************** Level Max 4  Linear Res  L2norm DX = 2.407503e-16
+       *************** Level Max 4  Linear Res  L2norm DY = 3.697260e-16
+       *************** Level Max 4  Linear Res  L2norm U = 1.736549e-14
+       *************** Level Max 4  Linear Res  L2norm V = 8.003692e-15
+       *************** Level Max 4  Linear Res  L2norm P = 1.239141e-12
+       *************** Linear-Cycle TIME:	  19.661194
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.033247e-09  ** Eps_l2norm= 8.212734e-10  ** Sol_l2norm= 7.948472e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 7.808819e-10  ** Eps_l2norm= 1.613562e-09  ** Sol_l2norm= 2.066333e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 4.685848e-09  ** Eps_l2norm= 2.477623e-06  ** Sol_l2norm= 5.287459e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.879539e-08  ** Eps_l2norm= 2.526019e-06  ** Sol_l2norm= 1.343956e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.127291e-10  ** Eps_l2norm= 2.823003e-06  ** Sol_l2norm= 2.504237e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  19.754633
+
+   ********* Nonlinear iteration 5 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.179711
+   ********* Level Max 4 MGINIT TIME:	0.418857
+   ********* Level Max 4 ASSEMBLY TIME:	11.046908
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.959502e+01 
+       *************** Number of outer ksp solver iterations = 11 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 2.5269811e-14 
+       *************** Level Max 4  Linear Res  L2norm DX = 6.490226e-21
+       *************** Level Max 4  Linear Res  L2norm DY = 9.986084e-21
+       *************** Level Max 4  Linear Res  L2norm U = 2.160033e-18
+       *************** Level Max 4  Linear Res  L2norm V = 7.801544e-19
+       *************** Level Max 4  Linear Res  L2norm P = 1.385894e-16
+       *************** Linear-Cycle TIME:	  19.605563
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 2.435203e-14  ** Eps_l2norm= 1.935614e-14  ** Sol_l2norm= 7.948472e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 1.030107e-14  ** Eps_l2norm= 2.128545e-14  ** Sol_l2norm= 2.066333e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 3.374502e-13  ** Eps_l2norm= 1.784254e-10  ** Sol_l2norm= 5.287459e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.311605e-12  ** Eps_l2norm= 1.762740e-10  ** Sol_l2norm= 1.343956e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 8.420341e-15  ** Eps_l2norm= 2.108653e-10  ** Sol_l2norm= 2.504237e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  19.699309
+
+   ****** Nonlinear-Cycle TIME:  142.312598
+
+   ****** End Level Max 4 ******
+
+   *** Nonlinear  TIME:  142.312622
+
+ That's alright, VTKParallelFiles/ is already there.
+
+ The output is printed to file output//sol.level4.7.biquadratic.pvtu in parallel VTK-XML (64-based) format
+Assemble Matrix
+assemble counter = 7
+ Simulation Time:  6.500000   TimeStep: 8
+
+ *** Start Nonlinear   V-Cycle ***
+
+   ****** Start Level Max 4 ******
+
+   ********* Nonlinear iteration 1 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	3.488749
+   ********* Level Max 4 MGINIT TIME:	0.418792
+   ********* Level Max 4 ASSEMBLY TIME:	13.388250
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.488493e+01 
+       *************** Number of outer ksp solver iterations = 7 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.0066366228 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.420055e-07
+       *************** Level Max 4  Linear Res  L2norm DY = 1.560485e-07
+       *************** Level Max 4  Linear Res  L2norm U = 3.348612e-07
+       *************** Level Max 4  Linear Res  L2norm V = 1.668247e-07
+       *************** Level Max 4  Linear Res  L2norm P = 2.202484e-05
+       *************** Linear-Cycle TIME:	  14.896132
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.514839e-01  ** Eps_l2norm= 1.085972e-01  ** Sol_l2norm= 7.168892e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 2.800460e-01  ** Eps_l2norm= 4.802965e-01  ** Sol_l2norm= 1.715063e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 6.497294e-02  ** Eps_l2norm= 3.436869e+01  ** Sol_l2norm= 5.289694e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.585316e-01  ** Eps_l2norm= 3.482084e+01  ** Sol_l2norm= 1.346870e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 6.564527e-03  ** Eps_l2norm= 1.645643e+02  ** Sol_l2norm= 2.506872e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  14.989165
+
+   ********* Nonlinear iteration 2 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.179634
+   ********* Level Max 4 MGINIT TIME:	0.418507
+   ********* Level Max 4 ASSEMBLY TIME:	11.049977
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.371763e+01 
+       *************** Number of outer ksp solver iterations = 6 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.0012845382 
+       *************** Level Max 4  Linear Res  L2norm DX = 3.630420e-10
+       *************** Level Max 4  Linear Res  L2norm DY = 7.661957e-10
+       *************** Level Max 4  Linear Res  L2norm U = 1.304904e-07
+       *************** Level Max 4  Linear Res  L2norm V = 5.405795e-08
+       *************** Level Max 4  Linear Res  L2norm P = 8.805217e-06
+       *************** Linear-Cycle TIME:	  13.729040
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 5.328955e-03  ** Eps_l2norm= 3.821648e-03  ** Sol_l2norm= 7.171478e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 3.304492e-03  ** Eps_l2norm= 5.651964e-03  ** Sol_l2norm= 1.710388e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 5.352936e-03  ** Eps_l2norm= 2.830681e+00  ** Sol_l2norm= 5.288090e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.377826e-02  ** Eps_l2norm= 1.859143e+00  ** Sol_l2norm= 1.349331e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 4.932086e-04  ** Eps_l2norm= 1.236076e+01  ** Sol_l2norm= 2.506192e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  13.822015
+
+   ********* Nonlinear iteration 3 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.180342
+   ********* Level Max 4 MGINIT TIME:	0.418619
+   ********* Level Max 4 ASSEMBLY TIME:	11.050903
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.606653e+01 
+       *************** Number of outer ksp solver iterations = 8 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 2.7788309e-06 
+       *************** Level Max 4  Linear Res  L2norm DX = 3.596815e-12
+       *************** Level Max 4  Linear Res  L2norm DY = 6.934106e-12
+       *************** Level Max 4  Linear Res  L2norm U = 2.099074e-10
+       *************** Level Max 4  Linear Res  L2norm V = 1.094119e-10
+       *************** Level Max 4  Linear Res  L2norm P = 1.353271e-08
+       *************** Linear-Cycle TIME:	  16.077487
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.233458e-05  ** Eps_l2norm= 8.845616e-06  ** Sol_l2norm= 7.171398e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 1.207052e-05  ** Eps_l2norm= 2.064506e-05  ** Sol_l2norm= 1.710370e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 4.091926e-05  ** Eps_l2norm= 2.163849e-02  ** Sol_l2norm= 5.288094e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.142732e-04  ** Eps_l2norm= 1.541940e-02  ** Sol_l2norm= 1.349345e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.423626e-06  ** Eps_l2norm= 3.567880e-02  ** Sol_l2norm= 2.506192e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  16.171258
+
+   ********* Nonlinear iteration 4 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.183859
+   ********* Level Max 4 MGINIT TIME:	0.424887
+   ********* Level Max 4 ASSEMBLY TIME:	11.117234
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.849274e+01 
+       *************** Number of outer ksp solver iterations = 10 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 5.4785135e-10 
+       *************** Level Max 4  Linear Res  L2norm DX = 2.768583e-15
+       *************** Level Max 4  Linear Res  L2norm DY = 2.910998e-15
+       *************** Level Max 4  Linear Res  L2norm U = 1.170328e-13
+       *************** Level Max 4  Linear Res  L2norm V = 3.897840e-14
+       *************** Level Max 4  Linear Res  L2norm P = 9.095116e-12
+       *************** Linear-Cycle TIME:	  18.502944
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 3.727672e-09  ** Eps_l2norm= 2.673262e-09  ** Sol_l2norm= 7.171398e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 2.969699e-09  ** Eps_l2norm= 5.079285e-09  ** Sol_l2norm= 1.710370e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 6.832781e-09  ** Eps_l2norm= 3.613239e-06  ** Sol_l2norm= 5.288094e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.349111e-08  ** Eps_l2norm= 3.169762e-06  ** Sol_l2norm= 1.349345e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.757762e-10  ** Eps_l2norm= 4.405288e-06  ** Sol_l2norm= 2.506192e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  18.595753
+
+   ********* Nonlinear iteration 5 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.178871
+   ********* Level Max 4 MGINIT TIME:	0.422401
+   ********* Level Max 4 ASSEMBLY TIME:	11.069794
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.955765e+01 
+       *************** Number of outer ksp solver iterations = 11 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 1.6363192e-14 
+       *************** Level Max 4  Linear Res  L2norm DX = 2.004048e-20
+       *************** Level Max 4  Linear Res  L2norm DY = 2.502348e-20
+       *************** Level Max 4  Linear Res  L2norm U = 2.174726e-18
+       *************** Level Max 4  Linear Res  L2norm V = 8.674716e-19
+       *************** Level Max 4  Linear Res  L2norm P = 1.649643e-16
+       *************** Linear-Cycle TIME:	  19.567355
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 5.595677e-14  ** Eps_l2norm= 4.012883e-14  ** Sol_l2norm= 7.171398e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 3.895182e-14  ** Eps_l2norm= 6.662203e-14  ** Sol_l2norm= 1.710370e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.530288e-12  ** Eps_l2norm= 8.092308e-10  ** Sol_l2norm= 5.288094e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 7.131286e-12  ** Eps_l2norm= 9.622567e-10  ** Sol_l2norm= 1.349345e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 3.051176e-14  ** Eps_l2norm= 7.646834e-10  ** Sol_l2norm= 2.506192e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  19.660293
+
+   ****** Nonlinear-Cycle TIME:  140.914726
+
+   ****** End Level Max 4 ******
+
+   *** Nonlinear  TIME:  140.914750
+
+ That's alright, VTKParallelFiles/ is already there.
+
+ The output is printed to file output//sol.level4.8.biquadratic.pvtu in parallel VTK-XML (64-based) format
+Assemble Matrix
+assemble counter = 8
+ Simulation Time:  6.510000   TimeStep: 9
+
+ *** Start Nonlinear   V-Cycle ***
+
+   ****** Start Level Max 4 ******
+
+   ********* Nonlinear iteration 1 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	3.508529
+   ********* Level Max 4 MGINIT TIME:	0.427950
+   ********* Level Max 4 ASSEMBLY TIME:	13.400366
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.505412e+01 
+       *************** Number of outer ksp solver iterations = 7 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.0074099129 
+       *************** Level Max 4  Linear Res  L2norm DX = 6.432781e-08
+       *************** Level Max 4  Linear Res  L2norm DY = 8.111602e-08
+       *************** Level Max 4  Linear Res  L2norm U = 3.153710e-07
+       *************** Level Max 4  Linear Res  L2norm V = 1.628509e-07
+       *************** Level Max 4  Linear Res  L2norm P = 2.058159e-05
+       *************** Linear-Cycle TIME:	  15.064605
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 3.455512e-01  ** Eps_l2norm= 1.913493e-01  ** Sol_l2norm= 5.537511e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 5.021110e-01  ** Eps_l2norm= 6.241242e-01  ** Sol_l2norm= 1.243001e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 6.133310e-02  ** Eps_l2norm= 3.247110e+01  ** Sol_l2norm= 5.294222e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.422950e-01  ** Eps_l2norm= 3.305303e+01  ** Sol_l2norm= 1.364164e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 5.370025e-03  ** Eps_l2norm= 1.345103e+02  ** Sol_l2norm= 2.504835e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  15.157297
+
+   ********* Nonlinear iteration 2 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.178886
+   ********* Level Max 4 MGINIT TIME:	0.419938
+   ********* Level Max 4 ASSEMBLY TIME:	11.072588
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.146452e+01 
+       *************** Number of outer ksp solver iterations = 4 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.0030590452 
+       *************** Level Max 4  Linear Res  L2norm DX = 2.203934e-08
+       *************** Level Max 4  Linear Res  L2norm DY = 1.796853e-08
+       *************** Level Max 4  Linear Res  L2norm U = 3.033216e-07
+       *************** Level Max 4  Linear Res  L2norm V = 1.988937e-07
+       *************** Level Max 4  Linear Res  L2norm P = 2.222444e-05
+       *************** Linear-Cycle TIME:	  11.474520
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 2.111540e-02  ** Eps_l2norm= 1.175705e-02  ** Sol_l2norm= 5.567996e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 4.771851e-03  ** Eps_l2norm= 5.909830e-03  ** Sol_l2norm= 1.238478e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 6.658523e-03  ** Eps_l2norm= 3.522971e+00  ** Sol_l2norm= 5.290919e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.473261e-02  ** Eps_l2norm= 2.013840e+00  ** Sol_l2norm= 1.366928e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.701722e-03  ** Eps_l2norm= 4.259232e+01  ** Sol_l2norm= 2.502896e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  11.567220
+
+   ********* Nonlinear iteration 3 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.189847
+   ********* Level Max 4 MGINIT TIME:	0.419347
+   ********* Level Max 4 ASSEMBLY TIME:	11.120363
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.612661e+01 
+       *************** Number of outer ksp solver iterations = 8 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 5.500414e-06 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.581970e-11
+       *************** Level Max 4  Linear Res  L2norm DY = 1.641321e-11
+       *************** Level Max 4  Linear Res  L2norm U = 8.687885e-10
+       *************** Level Max 4  Linear Res  L2norm V = 2.976914e-10
+       *************** Level Max 4  Linear Res  L2norm P = 5.473060e-08
+       *************** Linear-Cycle TIME:	  16.135450
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 7.095403e-05  ** Eps_l2norm= 3.950460e-05  ** Sol_l2norm= 5.567633e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 6.595842e-05  ** Eps_l2norm= 8.168367e-05  ** Sol_l2norm= 1.238412e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 7.791927e-05  ** Eps_l2norm= 4.122654e-02  ** Sol_l2norm= 5.290930e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.682221e-04  ** Eps_l2norm= 2.299528e-02  ** Sol_l2norm= 1.366959e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 3.922116e-06  ** Eps_l2norm= 9.816656e-02  ** Sol_l2norm= 2.502898e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  16.229309
+
+   ********* Nonlinear iteration 4 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.186546
+   ********* Level Max 4 MGINIT TIME:	0.422849
+   ********* Level Max 4 ASSEMBLY TIME:	11.157566
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.751378e+01 
+       *************** Number of outer ksp solver iterations = 9 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 1.6938501e-09 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.827783e-14
+       *************** Level Max 4  Linear Res  L2norm DY = 2.780747e-14
+       *************** Level Max 4  Linear Res  L2norm U = 1.176872e-13
+       *************** Level Max 4  Linear Res  L2norm V = 3.584983e-14
+       *************** Level Max 4  Linear Res  L2norm P = 8.115183e-12
+       *************** Linear-Cycle TIME:	  17.522510
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.589397e-08  ** Eps_l2norm= 8.849180e-09  ** Sol_l2norm= 5.567633e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 1.581966e-08  ** Eps_l2norm= 1.959125e-08  ** Sol_l2norm= 1.238412e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.953514e-08  ** Eps_l2norm= 1.033591e-05  ** Sol_l2norm= 5.290930e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 6.475742e-08  ** Eps_l2norm= 8.852077e-06  ** Sol_l2norm= 1.366959e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 7.170261e-10  ** Eps_l2norm= 1.794643e-05  ** Sol_l2norm= 2.502898e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  17.616669
+
+   ********* Nonlinear iteration 5 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.188029
+   ********* Level Max 4 MGINIT TIME:	0.424257
+   ********* Level Max 4 ASSEMBLY TIME:	11.111603
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.863388e+01 
+       *************** Number of outer ksp solver iterations = 10 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 1.051834e-13 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.243255e-18
+       *************** Level Max 4  Linear Res  L2norm DY = 1.487803e-18
+       *************** Level Max 4  Linear Res  L2norm U = 8.065914e-18
+       *************** Level Max 4  Linear Res  L2norm V = 4.492905e-18
+       *************** Level Max 4  Linear Res  L2norm P = 6.188399e-16
+       *************** Linear-Cycle TIME:	  18.641132
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 3.371113e-12  ** Eps_l2norm= 1.876912e-12  ** Sol_l2norm= 5.567633e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 2.477975e-12  ** Eps_l2norm= 3.068753e-12  ** Sol_l2norm= 1.238412e+00
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.737578e-12  ** Eps_l2norm= 9.193405e-10  ** Sol_l2norm= 5.290930e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 6.880852e-12  ** Eps_l2norm= 9.405845e-10  ** Sol_l2norm= 1.366959e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 5.327728e-14  ** Eps_l2norm= 1.333476e-09  ** Sol_l2norm= 2.502898e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  18.734893
+
+   ****** Nonlinear-Cycle TIME:  137.167971
+
+   ****** End Level Max 4 ******
+
+   *** Nonlinear  TIME:  137.167993
+
+ That's alright, VTKParallelFiles/ is already there.
+
+ The output is printed to file output//sol.level4.9.biquadratic.pvtu in parallel VTK-XML (64-based) format
+Assemble Matrix
+assemble counter = 9
+ Simulation Time:  6.520000   TimeStep: 10
+
+ *** Start Nonlinear   V-Cycle ***
+
+   ****** Start Level Max 4 ******
+
+   ********* Nonlinear iteration 1 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	3.491770
+   ********* Level Max 4 MGINIT TIME:	0.421461
+   ********* Level Max 4 ASSEMBLY TIME:	13.384680
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.147249e+01 
+       *************** Number of outer ksp solver iterations = 4 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.025510482 
+       *************** Level Max 4  Linear Res  L2norm DX = 2.297736e-07
+       *************** Level Max 4  Linear Res  L2norm DY = 2.810039e-07
+       *************** Level Max 4  Linear Res  L2norm U = 1.036582e-05
+       *************** Level Max 4  Linear Res  L2norm V = 3.996796e-06
+       *************** Level Max 4  Linear Res  L2norm P = 7.068690e-04
+       *************** Linear-Cycle TIME:	  11.484377
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 7.268746e-01  ** Eps_l2norm= 2.514641e-01  ** Sol_l2norm= 3.459525e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 8.893899e-01  ** Eps_l2norm= 7.371435e-01  ** Sol_l2norm= 8.288193e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 5.596303e-02  ** Eps_l2norm= 2.968942e+01  ** Sol_l2norm= 5.305184e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.306409e-01  ** Eps_l2norm= 3.181247e+01  ** Sol_l2norm= 1.379307e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.197413e-02  ** Eps_l2norm= 3.001513e+02  ** Sol_l2norm= 2.506665e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  11.577380
+
+   ********* Nonlinear iteration 2 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.202077
+   ********* Level Max 4 MGINIT TIME:	0.418800
+   ********* Level Max 4 ASSEMBLY TIME:	11.121943
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 9.158649e+00 
+       *************** Number of outer ksp solver iterations = 2 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 0.0071150076 
+       *************** Level Max 4  Linear Res  L2norm DX = 1.792933e-08
+       *************** Level Max 4  Linear Res  L2norm DY = 5.173477e-08
+       *************** Level Max 4  Linear Res  L2norm U = 8.116434e-06
+       *************** Level Max 4  Linear Res  L2norm V = 3.304789e-06
+       *************** Level Max 4  Linear Res  L2norm P = 5.488203e-04
+       *************** Linear-Cycle TIME:	   9.171228
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 6.640048e-02  ** Eps_l2norm= 2.332815e-02  ** Sol_l2norm= 3.513251e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 1.133020e-02  ** Eps_l2norm= 9.378536e-03  ** Sol_l2norm= 8.277471e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 7.628099e-03  ** Eps_l2norm= 4.041759e+00  ** Sol_l2norm= 5.298514e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 1.672929e-02  ** Eps_l2norm= 2.313660e+00  ** Sol_l2norm= 1.382999e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 4.774174e-03  ** Eps_l2norm= 1.194260e+02  ** Sol_l2norm= 2.501502e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	   9.266077
+
+   ********* Nonlinear iteration 3 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.194329
+   ********* Level Max 4 MGINIT TIME:	0.431433
+   ********* Level Max 4 ASSEMBLY TIME:	11.101012
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.730611e+01 
+       *************** Number of outer ksp solver iterations = 9 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 1.6725967e-05 
+       *************** Level Max 4  Linear Res  L2norm DX = 3.572869e-11
+       *************** Level Max 4  Linear Res  L2norm DY = 1.396891e-10
+       *************** Level Max 4  Linear Res  L2norm U = 3.030691e-08
+       *************** Level Max 4  Linear Res  L2norm V = 1.212054e-08
+       *************** Level Max 4  Linear Res  L2norm P = 2.047149e-06
+       *************** Linear-Cycle TIME:	  17.315033
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.168721e-04  ** Eps_l2norm= 4.105646e-05  ** Sol_l2norm= 3.512940e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 1.079272e-04  ** Eps_l2norm= 8.933259e-05  ** Sol_l2norm= 8.277117e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 1.915399e-04  ** Eps_l2norm= 1.014882e-01  ** Sol_l2norm= 5.298539e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 7.066454e-04  ** Eps_l2norm= 9.773255e-02  ** Sol_l2norm= 1.383049e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 9.877792e-06  ** Eps_l2norm= 2.470943e-01  ** Sol_l2norm= 2.501513e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  17.408357
+
+   ********* Nonlinear iteration 4 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.183374
+   ********* Level Max 4 MGINIT TIME:	0.421879
+   ********* Level Max 4 ASSEMBLY TIME:	11.079365
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 1.858453e+01 
+       *************** Number of outer ksp solver iterations = 10 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 4.6803026e-08 
+       *************** Level Max 4  Linear Res  L2norm DX = 7.997888e-15
+       *************** Level Max 4  Linear Res  L2norm DY = 1.862774e-14
+       *************** Level Max 4  Linear Res  L2norm U = 3.064470e-12
+       *************** Level Max 4  Linear Res  L2norm V = 1.672260e-12
+       *************** Level Max 4  Linear Res  L2norm P = 1.915815e-10
+       *************** Linear-Cycle TIME:	  18.592209
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 4.082246e-08  ** Eps_l2norm= 1.434069e-08  ** Sol_l2norm= 3.512940e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 3.723682e-08  ** Eps_l2norm= 3.082135e-08  ** Sol_l2norm= 8.277117e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 9.038454e-07  ** Eps_l2norm= 4.789060e-04  ** Sol_l2norm= 5.298539e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 3.595143e-06  ** Eps_l2norm= 4.972260e-04  ** Sol_l2norm= 1.383049e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 2.450964e-08  ** Eps_l2norm= 6.131119e-04  ** Sol_l2norm= 2.501513e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  18.684770
+
+   ********* Nonlinear iteration 5 *********
+   ********* Level Max 4 MG PROJECTION MATRICES TIME:	1.193346
+   ********* Level Max 4 MGINIT TIME:	0.421901
+   ********* Level Max 4 ASSEMBLY TIME:	11.080054
+     ********* Linear Cycle + Residual Update iteration 1
+       *************** Linear iteration 1 ***********
+       *************** MG linear solver time: 2.087563e+01 
+       *************** Number of outer ksp solver iterations = 12 
+       *************** Convergence reason = 2 
+       *************** Residual norm = 1.898009e-12 
+       *************** Level Max 4  Linear Res  L2norm DX = 2.273198e-18
+       *************** Level Max 4  Linear Res  L2norm DY = 1.188705e-17
+       *************** Level Max 4  Linear Res  L2norm U = 2.670993e-15
+       *************** Level Max 4  Linear Res  L2norm V = 1.062154e-15
+       *************** Level Max 4  Linear Res  L2norm P = 1.808750e-13
+       *************** Linear-Cycle TIME:	  20.885430
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DX= 1.697813e-12  ** Eps_l2norm= 5.964316e-13  ** Sol_l2norm= 3.512940e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm DY= 2.004350e-12  ** Eps_l2norm= 1.659024e-12  ** Sol_l2norm= 8.277117e-01
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm U= 6.005449e-11  ** Eps_l2norm= 3.182010e-08  ** Sol_l2norm= 5.298539e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm V= 2.291776e-10  ** Eps_l2norm= 3.169639e-08  ** Sol_l2norm= 1.383049e+02
+     ********* Level Max 4 Nonlinear Eps_l2norm/Sol_l2norm P= 1.336898e-12  ** Eps_l2norm= 3.344268e-08  ** Sol_l2norm= 2.501513e+04
+     ********* Linear Cycle + Residual Update-Cycle TIME:	  20.978541
+
+   ****** Nonlinear-Cycle TIME:  135.682263
+
+   ****** End Level Max 4 ******
+
+   *** Nonlinear  TIME:  135.682287
+
+ That's alright, VTKParallelFiles/ is already there.
+
+ The output is printed to file output//sol.level4.10.biquadratic.pvtu in parallel VTK-XML (64-based) format
+END_COMPUTATION
+END_COMPUTATION
+END_COMPUTATION
+
+ ~FemusInit(): PETSC_COMM_WORLD ends

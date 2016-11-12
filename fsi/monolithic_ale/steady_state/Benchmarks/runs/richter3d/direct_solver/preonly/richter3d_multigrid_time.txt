@@ -1,0 +1,10 @@
+
+
+Level_Max,Average_Time
+1,0.0753139
+
+Level_Max,Average_Time
+1,1.68548
+
+Level_Max,Average_Time
+1,86.8591
