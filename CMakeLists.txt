@@ -1,3 +1,11 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
   
-# TODO add applications
+PROJECT(FSIApps)
+
+SET(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+
+FIND_PACKAGE(Femus REQUIRED)
+
+INCLUDE(${CMAKE_SOURCE_DIR}/cmake/femusMacroBuildApplication.cmake)
+
+ADD_SUBDIRECTORY(fsi)
