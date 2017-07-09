@@ -30,6 +30,7 @@ int main(int argc,char **args) {
   char outer_ksp_solver[256] = "gmres";
   size_t len_infile_name = 256;
   double Lref=1., Uref=1., rhof=1., muf=1., rhos=1., ni=0., E=1.;
+  double gx=0., gy=0., gz=0.;
   int numofmeshlevels = 1;
   int numofrefinements = 1;
   std::string gauss_integration_order = "fifth";
@@ -92,6 +93,15 @@ int main(int argc,char **args) {
 
   PetscOptionsReal("-ni", "The Poisson coefficient of the Solid", "fsiSteady.cpp", ni, &ni, NULL);
   printf(" ni: %f\n", ni);
+  
+  PetscOptionsReal("-gx", "Gravity along x-direction", "fsiSteady.cpp", gx, &gx, NULL);
+  printf(" gx: %f\n", gx);
+  
+  PetscOptionsReal("-gy", "Gravity along y-direction", "fsiSteady.cpp", gy, &gy, NULL);
+  printf(" gy: %f\n", gy);
+  
+  PetscOptionsReal("-gz", "Gravity along z-direction", "fsiSteady.cpp", gz, &gz, NULL);
+  printf(" gz: %f\n", gz);
 
 //   PetscOptionsInt("-nlin_iter", "The number of linear iteration", "fsiSteady.cpp", numlineariter , &numlineariter, NULL);
 //   printf(" nlin_iter: %i\n", numlineariter);
@@ -194,6 +204,10 @@ int main(int argc,char **args) {
   // ******* Fluid and Solid Parameters *******
   Parameter par(Lref,Uref);
 
+  Gravity gravity(gx, gy, gz);
+  cout << "Gravity: " << endl;
+  cout << gravity << endl;
+  
   // Generate Solid Object
   Solid solid;
   solid = Solid(par,E,ni,rhos,"Mooney-Rivlin");
@@ -253,6 +267,7 @@ int main(int argc,char **args) {
   ml_prob.parameters.set<Fluid>("Fluid") = fluid;
   // Add Solid Object
   ml_prob.parameters.set<Solid>("Solid") = solid;
+  ml_prob.parameters.set<Gravity>("Gravity") = gravity;
 
 
   // ******* Add FSI system to the MultiLevel problem *******

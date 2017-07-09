@@ -118,7 +118,7 @@ namespace femus {
     const bool penalty = ml_prob.parameters.get < Solid>("Solid").get_if_penalty();
 
     // gravity
-    double _gravity[3] = {0., 0., 0.};
+    const double * gravity = ml_prob.parameters.get<Gravity>("Gravity").get_values();
 
     // -----------------------------------------------------------------
     // space discretization parameters
@@ -569,7 +569,7 @@ namespace femus {
               }
 
               for (int idim = 0; idim < dim; idim++) {
-                aRhs[indexVAR[idim]][i] += (phi[i] * _gravity[idim] - CauchyDIR[idim]) * jacobian;
+                aRhs[indexVAR[idim]][i] += (phi[i] * gravity[idim] - CauchyDIR[idim]) * jacobian;
               }
 
               //END redidual Solid Momentum in moving domain
@@ -768,7 +768,7 @@ namespace femus {
     const bool penalty = ml_prob.parameters.get < Solid>("Solid").get_if_penalty();
 
     // gravity
-    double _gravity[3] = {0., 0., 0.};
+    const double * gravity = ml_prob.parameters.get<Gravity>("Gravity").get_values();
 
     // -----------------------------------------------------------------
     // space discretization parameters
@@ -1219,7 +1219,7 @@ namespace femus {
               }
 
               for (int idim = 0; idim < dim; idim++) {
-                aRhs[indexVAR[dim+idim]][i] += (phi[i] * _gravity[idim] - CauchyDIR[idim]) * jacobian;
+                aRhs[indexVAR[dim+idim]][i] += (phi[i] * gravity[idim] - CauchyDIR[idim]) * jacobian;
               }
 
               //END redidual Solid Momentum in moving domain
